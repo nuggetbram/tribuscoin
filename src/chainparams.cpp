@@ -23,7 +23,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         // The message start string is designed to be unlikely to occur in normal data.
-        pchMessageStart[0] = 0xm7;
+        pchMessageStart[0] = 0xa7;
         pchMessageStart[1] = 0x27;
         pchMessageStart[2] = 0xb4;
         pchMessageStart[3] = 0xa6;
@@ -51,7 +51,7 @@ public:
         genesis.nVersion = BLOCK_VERSION_DEFAULT;
         genesis.nTime    = 1402821400;
         genesis.nBits    = 0x1e0fffff;
-        genesis.nNonce   = 0;
+        genesis.nNonce   = 1246150;
         
         //// debug print
         hashGenesisBlock = genesis.GetHash();
@@ -65,8 +65,8 @@ public:
         printf("%x\n", bnProofOfWorkLimit[ALGO_SHA256D].GetCompact());
         genesis.print();
 
-        assert(hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x00000dd3f8c704f67a7cde3616935579c90c856886efd4084328970db26ed9b2"));
+        assert(genesis.hashMerkleRoot == uint256("0x7ef5a18f291a360e5ddd3da0d4b92b944a83501b714481ac93271b4389de7b63"));
 
         vSeeds.push_back(CDNSSeedData("162.248.4.167", "5.175.134.120"));
         vSeeds.push_back(CDNSSeedData("5.231.60.198", "60.230.105.175"));
