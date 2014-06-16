@@ -78,7 +78,7 @@ public:
         base58Prefixes[SCRIPT_ADDRESS] = 5;
         base58Prefixes[SECRET_KEY] = 177;
 
-        // Convert the pnSeeds array into usable address objects.
+        /*// Convert the pnSeeds array into usable address objects.
         for (unsigned int i = 0; i < ARRAYLEN(pnSeed); i++)
         {
             // It'll only connect to one or two seed nodes because once it connects,
@@ -90,7 +90,7 @@ public:
             CAddress addr(CService(ip, GetDefaultPort()));
             addr.nTime = GetTime() - GetRand(nTwoDays) - nTwoDays;
             vFixedSeeds.push_back(addr);
-        }
+        }*/
     }
 
     virtual const CBlock& GenesisBlock() const { return genesis; }
