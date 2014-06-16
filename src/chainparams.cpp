@@ -68,6 +68,8 @@ public:
         assert(hashGenesisBlock == uint256("0x00000dd3f8c704f67a7cde3616935579c90c856886efd4084328970db26ed9b2"));
         assert(genesis.hashMerkleRoot == uint256("0x7ef5a18f291a360e5ddd3da0d4b92b944a83501b714481ac93271b4389de7b63"));
 
+        vFixedSeeds.clear();
+        vSeeds.clear();
         vSeeds.push_back(CDNSSeedData("162.248.4.167", "5.175.134.120"));
         vSeeds.push_back(CDNSSeedData("5.231.60.198", "60.230.105.175"));
 
@@ -121,8 +123,8 @@ public:
         strDataDir = "testnet";
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1402821400;
-        genesis.nNonce = 0;
+        genesis.nTime = 1402821500;
+        genesis.nNonce = 813473;
         
         //// debug print
         hashGenesisBlock = genesis.GetHash();
@@ -135,7 +137,7 @@ public:
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         genesis.print();
         
-        assert(hashGenesisBlock == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x00000225226ff85ea4deec16e757d2189f5c8867647f8c073cdb61630bcfa80a"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
