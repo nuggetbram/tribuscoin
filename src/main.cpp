@@ -1275,7 +1275,7 @@ const CBlockIndex* GetLastBlockIndexForAlgo(const CBlockIndex* pindex, int algo)
 int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 {
 
-    float nSubsidy = 10 * sin(nHeight/150000.0) - (1.0/31536.0) * nHeight + 100 * COIN;
+    float nSubsidy = 10.0 * sin((nHeight * 1.0)/150000.0) - (1.0/31536.0) * nHeight + 99 * COIN;
 
     if(nHeight > 3153600) // no block reward after 4 years
                     nSubsidy *= 0;
