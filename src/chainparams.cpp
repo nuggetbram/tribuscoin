@@ -71,7 +71,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         vSeeds.push_back(CDNSSeedData("162.248.4.167", "5.175.134.120"));
-        vSeeds.push_back(CDNSSeedData("5.231.60.198", "60.230.105.175"));
+        //vSeeds.push_back(CDNSSeedData("5.231.60.198", "60.230.105.175"));
 
 
         base58Prefixes[PUBKEY_ADDRESS] = 65; //TribusCoin address starts with T
